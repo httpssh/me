@@ -293,61 +293,6 @@
                 </section>
 
 
-                <!--
-          - testimonials
-        -->
-
-
-
-
-                <!--
-          - testimonials modal
-        -->
-
-                <div class="modal-container" data-modal-container>
-
-                    <div class="overlay" data-overlay></div>
-
-                    <section class="testimonials-modal">
-
-                        <button class="modal-close-btn" data-modal-close-btn>
-                            <ion-icon name="close-outline"></ion-icon>
-                        </button>
-
-                        <div class="modal-img-wrapper">
-                            <figure class="modal-avatar-box">
-                                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-                            </figure>
-
-                            <img src="./assets/images/icon-quote.svg" alt="quote icon">
-                        </div>
-
-                        <div class="modal-content">
-
-                            <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-                            <time datetime="2021-06-14">14 June, 2021</time>
-
-                            <div data-modal-text>
-                                <p>
-                                    Richard was hired to create a corporate identity. We were very pleased with the work
-                                    done. She has a
-                                    lot of experience
-                                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet,
-                                    ullamcous cididt
-                                    consectetur adipiscing
-                                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </section>
-
-                </div>
-
-
-
             </article>
 
 
@@ -654,7 +599,7 @@
                                         <ion-icon name="eye-outline"></ion-icon>
                                     </div>
 
-                                    <img src="https://iili.io/FR6mkKJ.png" alt="Web site" loading="lazy">
+                                    <img src="https://iili.io/FR6mkKJ.png" alt="Best Bullet match chess game" loading="lazy">
 
                                 </figure>
 
@@ -665,14 +610,14 @@
                             </a>
                         </li>
                         <li class="project-item  active" data-filter-item data-category="photos">
-                            <a href="https://freeimage.host/i/FRPdQf9">
+                            <a href="https://iili.io/FRPdQf9.jpg" data-lightbox-item>
 
                                 <figure class="project-img">
                                     <div class="project-item-icon-box">
                                         <ion-icon name="eye-outline"></ion-icon>
                                     </div>
 
-                                    <img src="https://iili.io/FRPdQf9.jpg" alt="Web site" loading="lazy">
+                                    <img src="https://iili.io/FRPdQf9.jpg" alt="Blue Sky photo" loading="lazy">
 
                                 </figure>
 
@@ -683,14 +628,14 @@
                             </a>
                         </li>
                         <li class="project-item  active" data-filter-item data-category="photos">
-                            <a href="https://freeimage.host/i/FRPIY7V">
+                            <a href="https://iili.io/FRPIY7V.jpg" data-lightbox-item>
 
                                 <figure class="project-img">
                                     <div class="project-item-icon-box">
                                         <ion-icon name="eye-outline"></ion-icon>
                                     </div>
 
-                                    <img src="https://iili.io/FRPIY7V.jpg" alt="Web site" loading="lazy">
+                                    <img src="https://iili.io/FRPIY7V.jpg" alt="Aeroplane photo" loading="lazy">
 
                                 </figure>
 
@@ -701,14 +646,14 @@
                             </a>
                         </li>
                         <li class="project-item  active" data-filter-item data-category="photos">
-                            <a href="https://iili.io/FRPR4V9.jpg">
+                            <a href="https://iili.io/FRPR4V9.jpg" data-lightbox-item>
 
                                 <figure class="project-img">
                                     <div class="project-item-icon-box">
                                         <ion-icon name="eye-outline"></ion-icon>
                                     </div>
 
-                                    <img src="https://iili.io/FRPR4V9.jpg" alt="Web site" loading="lazy">
+                                    <img src="https://iili.io/FRPR4V9.jpg" alt="White & black photo" loading="lazy">
 
                                 </figure>
 
@@ -751,7 +696,7 @@
 
                                 <figure class="blog-banner-box">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Pythagorean.svg/250px-Pythagorean.svg.png"
-                                        alt="Web site" loading="lazy">
+                                        alt="Pythagorean theorem diagram" loading="lazy">
                                 </figure>
 
                                 <div class="blog-content">
@@ -809,20 +754,23 @@
                 <section class="contact-form">
                     <h3 class="h3 form-title">Contact Form</h3>
 
-                    <form action="https://formspree.io/f/mgvyrqky" method="POST" class="form">
+                    <form action="https://formspree.io/f/mgvyrqky" method="POST" class="form" data-form>
 
                         <input type="hidden" name="_captcha" value="false">
 
 
                         <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required
+                                data-form-input>
 
-                            <input type="email" name="email" class="form-input" placeholder="Email address" required>
+                            <input type="email" name="email" class="form-input" placeholder="Email address" required
+                                data-form-input>
                         </div>
 
-                        <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+                        <textarea name="message" class="form-input" placeholder="Your Message" required
+                            data-form-input></textarea>
 
-                        <button class="form-btn" type="submit">
+                        <button class="form-btn" type="submit" disabled data-form-btn>
                             <ion-icon name="paper-plane"></ion-icon>
                             <span>Send Message</span>
                         </button>
@@ -832,6 +780,32 @@
 
             </article>
 
+
+        </div>
+
+
+        <!--
+      - #LIGHTBOX
+      - shows a full-size preview when a portfolio photo is clicked
+    -->
+
+        <div class="modal-container" data-modal-container>
+
+            <div class="overlay" data-overlay></div>
+
+            <section class="lightbox-modal">
+
+                <button class="modal-close-btn" data-modal-close-btn>
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+
+                <div class="lightbox-img-wrapper">
+                    <img src="" alt="" data-modal-img>
+                </div>
+
+                <h4 class="h3 lightbox-title" data-modal-title></h4>
+
+            </section>
 
         </div>
 
