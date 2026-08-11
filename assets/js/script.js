@@ -16,8 +16,8 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 
 
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+// lightbox variables
+const lightboxItems = document.querySelectorAll("[data-lightbox-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
@@ -25,33 +25,37 @@ const overlay = document.querySelector("[data-overlay]");
 // modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
-const testimonialsModalFunc = function () {
+const lightboxModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
 
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
+// add click event to all portfolio photos: open a lightbox instead of
+// navigating away to the external image host
+for (let i = 0; i < lightboxItems.length; i++) {
 
-  testimonialsItem[i].addEventListener("click", function () {
+  lightboxItems[i].addEventListener("click", function (event) {
 
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+    event.preventDefault();
 
-    testimonialsModalFunc();
+    const img = this.querySelector("img");
+    const title = this.querySelector(".project-title");
+
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
+    modalTitle.innerHTML = title ? title.innerHTML : "";
+
+    lightboxModalFunc();
 
   });
 
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+modalCloseBtn.addEventListener("click", lightboxModalFunc);
+overlay.addEventListener("click", lightboxModalFunc);
 
 
 
